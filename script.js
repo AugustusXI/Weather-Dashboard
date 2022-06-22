@@ -7,7 +7,7 @@ var userCityName = '';
 // making a call to the API to get forecast
 let getForecast = function(city) {
     // add city name to URL
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=imperial" ;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=imperial" ;
     // call API with updated URL
     fetch(queryURL)
             .then((response) => {
@@ -94,7 +94,7 @@ let displayUvIndex = function(data)
             else {uviColor = "#ff0000";}
             $("#uviColor").css({"background-color" : uviColor});
     // add current weather icon
-    $("#currentIcon").attr("src", "http://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png");
+    $("#currentIcon").attr("src", "https://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png");
     console.log(data.current.weather[0].icon)
 }
 
