@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/style.css">
+</head>
+<body class="bg-dark">
+    <!-- this is the combined header and Current weather module -->
+    <div class="d-flex col-md-12 flex bg-dark rounded-3">
+        <div class="col-md-6 m-2 h-100 p-5 text-white">
+            <h1>Weather Dashboard</h1>
+            <p>Input a City below to get a variety of forecasts</p>
+            <form id="cityInput" class="form-inline">
+                <div class="input-group w-75 py-3">
+                    <input type="text" id="city" class="form-control" placeholder="City" aria-label="City">
+                </div>    
+                    <input type="submit" id="submitBtn" class="btn btn-outline-light" value="Get Weather">
+                </div>
+            </form>
+            
+            <!-- This is the current Weather Data -->
+            <div class="col-md-6 pt-5 mt-5">
+                <div class="card border-light mb-3" style="max-width: 18rem;">
+                    <div class="card-body bg-dark text-light rounded-3">
+                        <div class="d-flex flex-row">
+                            <h2 class="card-title align-self-center" id="cityName"></h2>
+                        </div>
+                        <img id="currentIcon" src="" alt="current icon">
+                        <h6 class="card-subtitle text-light opacity-75" id="cityTemp">Temperature:</h6>
+                        <h6 class="card-subtitle text-light opacity-75" id="cityHumidity">Humidity:</h6>
+                        <h6 class="card-subtitle text-light opacity-75" id="cityWindSpeed">Wind Speed:</h6>
+                        <h6 class="card-subtitle text-light opacity-75" id="cityUvIndex">UV Index: <div id="uviColor"></div></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<section class="searchHistory">
+    <ul class="col-sm" id="cityList"></ul>
+    <div class="btn btn-light" id="clearHistory">Clear History</div>   
+</section>
+<div class="row-12">
+    <h3>
+        5 day forecast
+    </h3>
+</div>
+<section class="weeklyForecast">
+    <div class="forecastCards">
+        <div id="day1" class="col-2">
+            <p id="day1Date"></p>
+            <img id="day1Icon" src="" alt="daily icon">
+            <p id="day1Temp"></p>
+            <p id="day1Wind"></p>
+            <p id="day1Humidity"></p>
+        </div>
+    </div>
+    <div class="forecastCards">
+        <div id="day2" class="col-2">
+            <p id="day2Date"></p>
+            <img id="day2Icon" src="" alt="daily icon">
+            <p id="day2Temp"></p>
+            <p id="day2Wind"></p>
+            <p id="day2Humidity"></p>
+        </div>
+    </div>
+    <div class="forecastCards">
+        <div id="day3" class="col-2">
+            <p id="day3Date"></p>
+            <img id="day3Icon" src="" alt="daily icon">
+            <p id="day3Temp"></p>
+            <p id="day3Wind"></p>
+            <p id="day3Humidity"></p>
+        </div>
+    </div>
+    <div class="forecastCards">
+        <div id="day4" class="col-2">
+            <p id="day4Date"></p>
+            <img id="day4Icon" src="" alt="daily icon">
+            <p id="day4Temp"></p>
+            <p id="day4Wind"></p>
+            <p id="day4Humidity"></p>
+        </div>
+    </div>
+    <div class="forecastCards">
+        <div id="day5" class="col-2">
+            <p id="day5Date"></p>
+            <img id="day5Icon" src="" alt="daily icon">
+            <p id="day5Temp"></p>
+            <p id="day5Wind"></p>
+            <p id="day5Humidity"></p>
+        </div>
+    </div>
+</section>
+    <!-- <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">Date:</div>
+        <div class="card-body text-dark">
+            <h5 class="card-title">Dark card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div> -->
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- <script src="./script_test.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>

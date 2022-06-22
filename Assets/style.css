@@ -1,0 +1,45 @@
+ body {
+     margin: 1em;
+ }
+ .forecastCards 
+{
+    color: white;
+    border: whitesmoke;
+    border-style: solid;
+    border-radius: 25px;
+    padding:1rem;
+}
+
+/* .forecastCards p
+{
+    display:inline;
+} */
+
+.weeklyForecast 
+{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+}    
+
+#uviColor
+{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    color:black;
+}
+#clearHistory
+{
+    max-height: 5rem;
+    max-width: 10rem;
+    margin-top: 10rem;
+}
+h3
+{
+    color:whitesmoke;
+}
